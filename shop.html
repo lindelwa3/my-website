@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shop - Aura Essence</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body {
+font-family:Poppins;
+background:#0f0f0f;
+color:white;
+margin:0;
+}
+
+/* HEADER */
+header {
+padding:20px;
+background:black;
+text-align:center;
+border-bottom:1px solid #d4af37;
+}
+
+header h1 {
+color:#d4af37;
+font-family:"Playfair Display";
+letter-spacing:2px;
+}
+
+nav a {
+color:white;
+margin:0 15px;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover {
+color:#d4af37;
+}
+
+/* GRID */
+.grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+padding:40px;
+}
+
+/* PRODUCT CARD */
+.card {
+background:#1a1a1a;
+padding:20px;
+text-align:center;
+border-radius:12px;
+transition:0.3s;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.card:hover {
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(212,175,55,0.3);
+}
+
+/* IMAGE */
+.card img {
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+/* TEXT */
+.card h3 {
+margin:10px 0 5px;
+font-family:"Playfair Display";
+}
+
+.category {
+color:#aaa;
+font-size:14px;
+}
+
+.price {
+color:#d4af37;
+font-size:18px;
+font-weight:bold;
+margin:10px 0;
+}
+
+/* BUTTON */
+button {
+background:#d4af37;
+border:none;
+padding:10px 15px;
+cursor:pointer;
+border-radius:5px;
+font-weight:bold;
+transition:0.3s;
+}
+
+button:hover {
+background:white;
+color:black;
+}
+
+/* FOOTER */
+footer {
+text-align:center;
+padding:20px;
+font-size:14px;
+color:#888;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Aura Essence Collection</h1>
+<nav>
+<a href="index.html">Home</a>
+</nav>
+</header>
+
+<div class="grid">
+
+<div class="card">
+<img src="images/yara.jpg">
+<h3>Yara</h3>
+<p class="category">For Women</p>
+<p class="price">R550</p>
+<button onclick="buy('Yara')">Order on Whatsapp</button>
+</div>
+
+<div class="card">
+<img src="images/khamrah.jpg">
+<h3>Khamrah</h3>
+<p class="category">Unisex</p>
+<p class="price">R750</p>
+<button onclick="buy('Khamrah')">Order on Whatsapp</button>
+</div>
+
+<div class="card">
+<img src="images/asad.jpg">
+<h3>Asad</h3>
+<p class="category">For Men</p>
+<p class="price">R750</p>
+<button onclick="buy('Asad')">Order on Whatsapp</button>
+</div>
+
+<div class="card">
+<img src="images/fakhar.jpg">
+<h3>Fakhar Rose</h3>
+<p class="category">For Women</p>
+<p class="price">R750</p>
+<button onclick="buy('Fakhar Rose')">Order on Whatsapp</button>
+</div>
+
+<div class="card">
+<img src="images/ameer.jpg">
+<h3>Ameer Al Oud</h3>
+<p class="category">For Men</p>
+<p class="price">R800</p>
+<button onclick="buy('Ameer Al Oud')">Order on Whatsapp</button>
+</div>
+
+</div>
+
+<footer>
+© 2026 Aura Essence. Luxury Fragrance Store.
+</footer>
+
+<script>
+function buy(product){
+let phone = "27692274893"; 
+
+let message = "Hi, I want to order " + product + " from Aura Essence. Please send payment details.";
+
+window.location.href = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+}
+</script>
+
+</body>
+</html>
